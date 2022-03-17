@@ -2,12 +2,25 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="#">TestRecipes</a>
-      <span class="navbar-toggler-icon"></span>
     </div>
-    <div class="navbar-nav">
-      <a class="nav-link" href="#">All Recipes</a>
-      <a class="nav-link" href="#">All Recipes</a>
-      <a class="nav-link" href="#">All Recipes</a>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Favorites</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+        <li class="nav-item dropdown" appDropdown>
+          <a class="nav-link dropdown-toggle" role="button" style="cursor: pointer">
+            <i class="bi bi-globe2" style="font-size: 1rem; color: whitesmoke;"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" style="cursor: pointer;">English</a></li>
+            <li><a class="dropdown-item" style="cursor: pointer;">Spanish</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
