@@ -7,6 +7,7 @@ import { DataStorageService } from '../shared/data-storage.service';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent implements OnInit {
+  searchFilter = '';
 
   constructor( private dataStorageService: DataStorageService) { }
 

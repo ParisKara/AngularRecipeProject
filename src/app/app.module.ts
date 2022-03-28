@@ -10,6 +10,8 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { SearchFilterPipe } from './shared/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -19,11 +21,13 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     RecipeListComponent,
     RecipeItemComponent,
-    RecipesComponent
+    RecipesComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],
