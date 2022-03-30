@@ -5,7 +5,6 @@ import { Pipe, PipeTransform } from '@angular/core';
   pure: false
 })
 export class SearchFilterPipe implements PipeTransform {
-
   transform(value: any, filteredString: string, propName: string): any {
     if (value.length === 0 || filteredString === '') {
       return value;

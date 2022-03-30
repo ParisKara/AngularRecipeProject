@@ -12,6 +12,7 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SearchFilterPipe } from './shared/search-filter.pipe';
+import { PaginationPipe } from './shared/pagination.pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SearchFilterPipe } from './shared/search-filter.pipe';
     RecipeListComponent,
     RecipeItemComponent,
     RecipesComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    PaginationPipe
   ],
   imports: [
     BrowserModule,
