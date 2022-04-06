@@ -11,8 +11,11 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-xs-10">
+    <div *ngIf="!isLoading">
       <app-recipe-list [searchFilter]="searchFilter"></app-recipe-list>
+    </div>
+    <div *ngIf="isLoading" style="text-align: center;">
+      <app-loading-spinner></app-loading-spinner>
     </div>
   </div>
 </div>

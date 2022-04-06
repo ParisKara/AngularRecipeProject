@@ -8,6 +8,7 @@ import { DataStorageService } from '../shared/data-storage.service';
 })
 export class RecipesComponent implements OnInit {
   searchFilter = '';
+  isLoading = false;
 
   constructor( private dataStorageService: DataStorageService) { }
 
@@ -17,4 +18,5 @@ export class RecipesComponent implements OnInit {
   onFetchData() {
     this.dataStorageService.fetchRecipes().subscribe();
   }
+
 }
