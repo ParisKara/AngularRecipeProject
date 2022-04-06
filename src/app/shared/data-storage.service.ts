@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Recipe } from '../recipes/recipe.model';
-import { map, tap } from 'rxjs';
+import { delay, map, tap } from 'rxjs';
 import { __importDefault } from 'tslib';
 import { RecipeService } from '../recipes/recipe.service';
 
@@ -16,6 +16,7 @@ export class DataStorageService {
         'https://www.themealdb.com/api/json/v1/1/search.php?f=s'
       )
       .pipe(
+        delay(3000),
         map((responseData) =>
           responseData.meals.map((meal) => ({
             id: +meal.idMeal,

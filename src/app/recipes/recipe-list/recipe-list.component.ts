@@ -28,6 +28,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
       }
     );
     this.recipes = this.recipeService.getRecipes();
+    this.numberOfPages = Math.ceil(this.recipes.length / this.elementsPerPage);
   }
 
   ngOnDestroy(): void {

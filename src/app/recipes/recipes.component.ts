@@ -16,7 +16,11 @@ export class RecipesComponent implements OnInit {
   }
 
   onFetchData() {
-    this.dataStorageService.fetchRecipes().subscribe();
+    this.isLoading = true;
+    this.dataStorageService.fetchRecipes().subscribe(() => {
+      this.isLoading = false;
+    }, () =>{
+      this.isLoading = false;
+    });
   }
-
 }
