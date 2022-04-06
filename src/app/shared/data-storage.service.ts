@@ -18,6 +18,7 @@ export class DataStorageService {
       .pipe(
         map((responseData) =>
           responseData.meals.map((meal) => ({
+            id: +meal.idMeal,
             name: meal.strMeal,
             category: meal.strCategory,
             instructions: meal.strInstructions,

@@ -1,1 +1,15 @@
-<p>recipe works!</p>
+<div class="container-fluid mt-4 mb-5">
+  <div class="row">
+    <div class="col">
+      <h2><u>{{ recipe.name }}</u></h2>
+      <h4><u>Category: {{ recipe.category }}</u></h4>
+    </div>
+    <div class="col">
+      <img [src]="recipe.image" alt="{{ recipe.name }}" class="rounded float-end" style="max-height: 400px;">
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <p>{{ recipe.instructions }}</p>
+  </div>
+</div>
